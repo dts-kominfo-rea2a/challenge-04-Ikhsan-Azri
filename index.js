@@ -8,7 +8,24 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates,index)=>{
+const arrDate=[];
+
+  for(const date of dates){
+    arrDate.push(Date.parse(date).toString().slice(0,-3));
+  }
+
+  if(index !== undefined){
+    return arrDate[index];
+  }else{
+    
+    return arrDate.sort().join("-");
+  }
+};
+
+
+
+
 
 // ! JANGAN DIMODIFIKASI
 (() => {
