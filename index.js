@@ -15,11 +15,10 @@ const arrDate=[];
     arrDate.push(Date.parse(date).toString().slice(0,-3));
   }
 
-  if(index !== undefined){
-    return arrDate[index];
-  }else{
-    
+  if(index === undefined){
     return arrDate.sort().join("-");
+  }else{
+    return arrDate[index];
   }
 };
 
